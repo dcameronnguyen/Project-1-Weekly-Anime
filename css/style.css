@@ -9,3 +9,51 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+a {
+    text-align: center;
+    border: 5px solid purple;
+    color:white;
+    width: 12.4%;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(4, 246, 85);
+}
+
+#dailygroup {
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 225px;
+    height: 350px;
+    margin: 10px;
+    border: black;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 15px 1px royalblue;
+}
+
+.flex-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    border: solid black;
+    position: absolute;
+    bottom: 0;    
+}
