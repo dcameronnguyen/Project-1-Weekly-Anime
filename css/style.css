@@ -18,9 +18,9 @@ nav {
 
 a {
     text-align: center;
-    border: 5px solid purple;
+    border: 2px solid purple;
     color:white;
-    width: 12.4%;
+    width: 14.3%;
 }
 
 header, footer {
@@ -44,7 +44,7 @@ main {
     width: 225px;
     height: 350px;
     margin: 10px;
-    border: black;
+    border: 2px solid black;
     box-shadow: 1px 1px 12px 1px royalblue;
 }
 
