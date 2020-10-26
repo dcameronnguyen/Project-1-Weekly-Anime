@@ -31,6 +31,11 @@ header, footer {
     background-color: rgb(4, 246, 85);
 }
 
+main {
+    flex-grow: 1;
+    background-color: rgb(25, 33, 41);
+}
+
 #dailygroup {
     flex-wrap: wrap;
 }
@@ -40,10 +45,11 @@ header, footer {
     height: 350px;
     margin: 10px;
     border: black;
+    box-shadow: 1px 1px 12px 1px royalblue;
 }
 
 .card:hover {
-    box-shadow: 1px 1px 15px 1px royalblue;
+    box-shadow: 1px 1px 15px 1px rgb(213, 222, 230);
 }
 
 .flex-ctr {
@@ -54,6 +60,5 @@ header, footer {
 
 footer {
     border: solid black;
-    position: absolute;
-    bottom: 0;    
+    bottom: auto;    
 }
