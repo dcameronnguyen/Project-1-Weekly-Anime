@@ -20,7 +20,7 @@ a {
     text-align: center;
     border: 2px solid purple;
     color:white;
-    width: 14.3%;
+    width: 12.4%;
 }
 
 header, footer {
@@ -34,6 +34,10 @@ header, footer {
 main {
     flex-grow: 1;
     background-color: rgb(25, 33, 41);
+}
+
+article {
+    background-color: white;
 }
 
 #dailygroup {

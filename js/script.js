@@ -6,14 +6,16 @@ const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://api.jikan.moe/v3/s
 
 // State Data
 
-let animeData, animeDetail;
+let animeData, animeDetail, animeDay;
 
 // Cached Element References
 
 const $dailygroup = $('#dailygroup');
+const $navDay = $('#days')
 
 // Attached Event Listeners
 
+$navDay.on('click', 'a', handleNavClick);
 $dailygroup.on('click', 'article.card', handleClick);
 
 // Functions
@@ -24,55 +26,60 @@ function init() {
     getData();
 }
 
-function getData(detail_URL) {
-    console.log('detail URL', detail_URL)
-
-    let url;
-
-    if(detail_URL === undefined) {
-        url = BASE_URL;
-    } else {
-        url = detail_URL;
-    }
+function getData() {
 
     // fetch data using AJAX
-    $.ajax(url).then(function(data) {
-        if(detail_URL === undefined) {
-            animeData = data;
+    $.ajax(BASE_URL).then(function(data) {
         
-        } else {
-            animeDetail = data;
-
-            render(true);
-        }
+        animeData = data;
+        console.log(animeData);
+        render();
+      
     }, function(error) {
         console.log('Error: ', error);
     });
 }
 
-function handleClick() {
-    getData(this.dataset.url);
+function handleNavClick() {
+    if('#sun') {
+        animeDay = 'sunday';
+    }
+    if('#mon') {
+        animeDay = 'monday';
+    }
+    if('#tues') {
+        animeDay = 'tuesday';
+    }
+    if('#wed') {
+        animeDay = 'wednesday';
+    }
+    if('#thur') {
+        animeDay = 'thursday';
+    }
+    if('#fri') {
+        animeDay = 'friday';
+    }
+    if('#sat') {
+        animeDay = 'saturday';
+    }
+
+    return animeDay;
 }
 
-// function render() {
-//     if(showModal === true) {
-//         const $modalContent = $(`
-//             <h5></h5>
-//             <p>Height:</p>
-//             <p>Moves:</p>
-//             <p>Abilities: </p>
-//         `);
-//         const $modal = $('#animodal');
-//         $modal.html($modalContent)
-//         $modal.modal();
-//     } else {
-//         const htmlArray = animeData.results.map(anime => {
-//             return`
-//             <article data-url="${anime.url}" class="card flex-ctr">
-//                 <h3>${anime.title}</h3>
-//             </article>
-//             `;
-//         });
-//         $dailygroup.html(htmlArray);
-//     }
-// }
+function handleClick() {
+    alert('card was clicked!');
+}
+
+function render(animeDay) {
+
+    const htmlArray = animeData.monday.map(anime => {
+        return`
+        <article data-url="${anime.url}" class="card flex-ctr">
+            <img src="${anime.image_url}"></img>
+        </article>
+        `;
+    });
+
+    $dailygroup.html(htmlArray);
+
+}
