@@ -19,7 +19,7 @@ Rough design layout
 ![wireframe](./imgs/week-anime-wireframe.png)
 
 ## Getting Started
-[Click Here](#) to see the deployed app!
+[Click Here](https://dcameronnguyen.github.io/Daily-Anime/) to see the deployed app!
 
 ## Future Enhancements
 - Display production studios
