@@ -18,9 +18,18 @@ nav {
 
 a {
     text-align: center;
-    border: 2px solid purple;
+    border: 1px solid purple;
     color:white;
     width: 12.4%;
+}
+
+a:hover {
+    border: 3px solid red;
+    box-shadow: 1px 1px 10px 1px steelblue;
+}
+
+a:active {
+    border: 3px solid royalblue;
 }
 
 header, footer {
