@@ -47,6 +47,16 @@ function handleNavClick(evt) {
 }
 
 function handleClick() {
+    
+    const $modalContent = $(`
+        <p>Title: ${this.title}</p>
+        <p>Synopsis: ${this.synopsis}</p>
+        <p>Episodes: ${this.episodes}</p>
+    `);
+    const $modal = $('#animodal');
+    $modal.html($modalContent)
+    $modal.modal();
+
     console.log(this.dataset);
 }
 

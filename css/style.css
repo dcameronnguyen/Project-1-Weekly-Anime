@@ -89,6 +89,7 @@ article {
 }
 
 footer > p {
+    text-align: center;
     color: black;
     width: 100%;
     padding: 1px 0 1px 0;
