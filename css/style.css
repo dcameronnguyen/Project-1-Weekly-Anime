@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,6 +19,7 @@ nav {
 }
 
 p {
+    font-family: 'Caveat', Cursive, Helvetica;
     text-align: center;
     border: 1px solid purple;
     color:white;
@@ -41,10 +44,12 @@ header, footer {
 }
 
 h1 {
+    font-family: 'Caveat', Cursive, Helvetica;
     font-style: italic;
 }
 
 h2 {
+    font-family: 'Caveat', Cursive, Helvetica;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +88,9 @@ article {
     align-items: center;
 }
 
-footer {
+footer > p {
+    color: black;
+    width: 100%;
     padding: 1px 0 1px 0;
     bottom: auto;    
 }
