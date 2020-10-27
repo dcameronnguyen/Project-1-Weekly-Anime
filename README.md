@@ -14,9 +14,13 @@ Simple web application that displays currently airing anime and the days those e
 - Jikan - Unofficial MyAnimeList API
 
 ## Screenshots
-Rough design layout
+Rough design layout:
 
 ![wireframe](./imgs/week-anime-wireframe.png)
+
+Actual Web App Look:
+
+![wireframe](./imgs/actualapp.png)
 
 ## Getting Started
 [Click Here](https://daily-anime.vercel.app/) to see the deployed app!
