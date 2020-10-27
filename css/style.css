@@ -18,7 +18,7 @@ nav {
     background-color: black;
 }
 
-p {
+nav > p {
     font-family: 'Caveat', Cursive, Helvetica;
     text-align: center;
     border: 1px solid purple;
@@ -26,12 +26,12 @@ p {
     width: 14.3%;
 }
 
-p:hover {
+nav > p:hover {
     border: 3px solid red;
     box-shadow: 1px 1px 10px 1px steelblue;
 }
 
-p:active {
+nav > p:active {
     border: 3px solid royalblue;
 }
 
