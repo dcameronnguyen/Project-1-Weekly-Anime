@@ -1,4 +1,4 @@
-# Weekly Anime
+# Daily Anime
 
 Simple web application that displays currently airing anime and the days those episodes update/air
 
