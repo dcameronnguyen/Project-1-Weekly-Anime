@@ -48,26 +48,30 @@ function handleNavClick(evt) {
 
 function handleClick() {
     
+   let animeObj = animeData[animeDay][this.dataset.index];
     const $modalContent = $(`
-        <p>Title: ${this.title}</p>
-        <p>Synopsis: ${this.synopsis}</p>
-        <p>Episodes: ${this.episodes}</p>
+        <p><strong>Title:</strong> ${animeObj.title}</p>
+        <br>
+        <p><strong>Synopsis:</strong> ${animeObj.synopsis}</p>
+        <br>
+        <p><strong>JPN 1st Aired Date:</strong> ${animeObj.airing_start}</p>
     `);
     const $modal = $('#animodal');
     $modal.html($modalContent)
     $modal.modal();
 
-    console.log(this.dataset);
+
 }
 
 function render() {
 
-    const htmlArray = animeData[animeDay].map(anime => {
+    const htmlArray = animeData[animeDay].map((anime, index) => {
         return`
-        <article data-title="${anime.title}" data-synop="${anime.synopsis}" data-episode="${anime.episodes}" class="card flex-ctr">
+        <article data-title="${anime.title}" data-synop="${anime.synopsis}" data-index="${index}" class="card flex-ctr">
             <img src="${anime.image_url}"></img>
         </article>
         `;
+        
     });
 
     $dailygroup.html(htmlArray);

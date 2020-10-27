@@ -10,9 +10,11 @@ Simple web application that displays currently airing anime and the days those e
 - jQuery
 - jQuery Modal
 - Google Fonts
+- CORS Anywhere Proxy
 - Jikan - Unofficial MyAnimeList API
 
 ## Screenshots
+Rough design layout
 
 ![wireframe](./imgs/week-anime-wireframe.png)
 
@@ -20,6 +22,6 @@ Simple web application that displays currently airing anime and the days those e
 [Click Here](#) to see the deployed app!
 
 ## Future Enhancements
-- Display seasonal anime
 - Display production studios
 - Display recommendations from other users
+- Display current available episodes
