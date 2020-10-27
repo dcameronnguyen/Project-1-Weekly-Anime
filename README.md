@@ -20,7 +20,7 @@ Rough design layout:
 
 Actual Web App Look:
 
-![wireframe](./imgs/actualapp.png)
+![wireframe](./imgs/finalapp.png)
 
 ## Getting Started
 [Click Here](https://daily-anime.vercel.app/) to see the deployed app!
