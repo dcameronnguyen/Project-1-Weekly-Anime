@@ -47,14 +47,14 @@ function handleNavClick(evt) {
 }
 
 function handleClick() {
-    alert('card was clicked');
+    console.log(this.dataset);
 }
 
 function render() {
 
     const htmlArray = animeData[animeDay].map(anime => {
         return`
-        <article data-url="${anime.url}" class="card flex-ctr">
+        <article data-title="${anime.title}" data-synop="${anime.synopsis}" data-episode="${anime.episodes}" class="card flex-ctr">
             <img src="${anime.image_url}"></img>
         </article>
         `;
