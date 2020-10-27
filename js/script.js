@@ -29,26 +29,26 @@ function init() {
 function getData() {
 
     // fetch data using AJAX
-    $.ajax(BASE_URL).then(function(data) {
-        
+    $.ajax(BASE_URL).then(function (data) {
+
         animeData = data;
-      
-    }, function(error) {
+
+    }, function (error) {
         console.log('Error: ', error);
     });
 }
 
 function handleNavClick(evt) {
-    
+
     animeDay = evt.target.id;
-    
+
     render();
 
 }
 
 function handleClick() {
-    
-   let animeObj = animeData[animeDay][this.dataset.index];
+
+    let animeObj = animeData[animeDay][this.dataset.index];
     const $modalContent = $(`
         <p><strong>Title:</strong> ${animeObj.title}</p>
         <br>
@@ -66,12 +66,12 @@ function handleClick() {
 function render() {
 
     const htmlArray = animeData[animeDay].map((anime, index) => {
-        return`
+        return `
         <article data-title="${anime.title}" data-synop="${anime.synopsis}" data-index="${index}" class="card flex-ctr">
             <img src="${anime.image_url}"></img>
         </article>
         `;
-        
+
     });
 
     $dailygroup.html(htmlArray);

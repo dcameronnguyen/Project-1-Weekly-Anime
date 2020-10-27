@@ -18,24 +18,25 @@ nav {
     background-color: black;
 }
 
-nav > p {
+nav>p {
     font-family: 'Caveat', Cursive, Helvetica;
     text-align: center;
     border: 1px solid purple;
-    color:white;
+    color: white;
     width: 14.3%;
 }
 
-nav > p:hover {
+nav>p:hover {
     border: 3px solid red;
     box-shadow: 1px 1px 10px 1px steelblue;
 }
 
-nav > p:active {
+nav>p:active {
     border: 3px solid royalblue;
 }
 
-header, footer {
+header,
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,10 +89,10 @@ article {
     align-items: center;
 }
 
-footer > p {
+footer>p {
     text-align: center;
     color: black;
     width: 100%;
     padding: 1px 0 1px 0;
-    bottom: auto;    
+    bottom: auto;
 }
