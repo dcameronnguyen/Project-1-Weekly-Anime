@@ -6,7 +6,7 @@ const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://api.jikan.moe/v3/s
 
 // State Data
 
-let animeData, animeDetail, animeDay;
+let animeData, animeDay;
 
 // Cached Element References
 
@@ -15,7 +15,7 @@ const $navDay = $('#days')
 
 // Attached Event Listeners
 
-$navDay.on('click', 'a', handleNavClick);
+$navDay.on('click', 'p', handleNavClick);
 $dailygroup.on('click', 'article.card', handleClick);
 
 // Functions
@@ -32,47 +32,27 @@ function getData() {
     $.ajax(BASE_URL).then(function(data) {
         
         animeData = data;
-        console.log(animeData);
-        render();
       
     }, function(error) {
         console.log('Error: ', error);
     });
 }
 
-function handleNavClick() {
-    if('#sun') {
-        animeDay = 'sunday';
-    }
-    if('#mon') {
-        animeDay = 'monday';
-    }
-    if('#tues') {
-        animeDay = 'tuesday';
-    }
-    if('#wed') {
-        animeDay = 'wednesday';
-    }
-    if('#thur') {
-        animeDay = 'thursday';
-    }
-    if('#fri') {
-        animeDay = 'friday';
-    }
-    if('#sat') {
-        animeDay = 'saturday';
-    }
+function handleNavClick(evt) {
+    
+    animeDay = evt.target.id;
+    
+    render();
 
-    return animeDay;
 }
 
 function handleClick() {
-    alert('card was clicked!');
+    alert('card was clicked');
 }
 
-function render(animeDay) {
+function render() {
 
-    const htmlArray = animeData.monday.map(anime => {
+    const htmlArray = animeData[animeDay].map(anime => {
         return`
         <article data-url="${anime.url}" class="card flex-ctr">
             <img src="${anime.image_url}"></img>
