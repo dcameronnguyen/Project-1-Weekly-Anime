@@ -22,6 +22,7 @@ Rough design layout
 [Click Here](https://dcameronnguyen.github.io/Daily-Anime/) to see the deployed app!
 
 ## Future Enhancements
+- Display Genre
 - Display production studios
 - Display recommendations from other users
 - Display current available episodes
