@@ -16,11 +16,11 @@ Simple web application that displays currently airing anime and the days those e
 ## Screenshots
 Rough design layout:
 
-![wireframe](./imgs/week-anime-wireframe.png)
+![wireframe](./imgs/wireframe.png)
 
 Actual Web App Look:
 
-![wireframe](./imgs/finalclear.png)
+![wireframe](./imgs/finalclear.PNG)
 
 When Image is Clicked:
 
