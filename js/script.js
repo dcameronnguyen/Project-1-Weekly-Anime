@@ -65,10 +65,10 @@ function handleClick() {
 
 function render() {
 
-    const htmlArray = animeData[animeDay].map((anime, index) => {
+    const htmlArray = animeData[animeDay].map((animeObj, index) => {
         return `
-        <article data-title="${anime.title}" data-synop="${anime.synopsis}" data-index="${index}" class="card flex-ctr">
-            <img src="${anime.image_url}"></img>
+        <article data-title="${animeObj.title}" data-synop="${animeObj.synopsis}" data-index="${index}" class="card flex-ctr">
+            <img src="${animeObj.image_url}"></img>
         </article>
         `;
 
