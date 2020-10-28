@@ -20,6 +20,10 @@ Rough design layout:
 
 Actual Web App Look:
 
+![wireframe](./imgs/finalclear.png)
+
+When Image is Clicked:
+
 ![wireframe](./imgs/finalapp.png)
 
 ## Getting Started
