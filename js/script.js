@@ -41,6 +41,7 @@ function getData() {
 }
 
 function handleNavClick(evt) {
+    if(!animeData) return;
 
     animeDay = evt.target.id;
 
@@ -49,7 +50,6 @@ function handleNavClick(evt) {
 }
 
 function handleClick() {
-    if(!animeData) return;
 
     let animeObj = animeData[animeDay][this.dataset.index];
     const $modalContent = $(`
