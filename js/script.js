@@ -1,3 +1,5 @@
+(function() {
+
 // IPO Input -> Process -> Output
 
 // Constant Data
@@ -47,6 +49,7 @@ function handleNavClick(evt) {
 }
 
 function handleClick() {
+    if(!animeData) return;
 
     let animeObj = animeData[animeDay][this.dataset.index];
     const $modalContent = $(`
@@ -77,3 +80,5 @@ function render() {
     $dailygroup.html(htmlArray);
 
 }
+
+})();
